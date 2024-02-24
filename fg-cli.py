@@ -1,4 +1,5 @@
 #Main Script
+#Beta Version 1.5
 
 import click
 import configparser
@@ -40,9 +41,13 @@ base_urls = {
     'snmp_status': 'cmdb/system.snmp/sysinfo',
     'dns_status': 'monitor/system/acquired-dns',
     'voip_profile': 'cmdb/voip/profile/',
-    'ips_anomaly': 'monitor/ips/anomaly',
+    'waf': 'cmdb/waf/main-class/{id}',
+    'dlp': 'cmdb/dlp/filepattern/{id}',
+    'ips': 'monitor/ips/anomaly',
     'proxy_pac_file': 'monitor/webproxy/pacfile/download'  # Add Proxy PAC file key
 }
+
+
 
 
 # Function to fetch data from APIs
@@ -154,20 +159,21 @@ def fetch_dns_status():
 # Function to fetch WAF data
 def fetch_waf_data(waf_id):
     url = base_url + base_urls['waf'].format(id=waf_id)
-    data = fetch_data(url)
+    data = fetch_data('waf', {'id': waf_id})  # Pass endpoint and params separately
     if data:
         click.echo(data)
 
 # Function to fetch DLP data
 def fetch_dlp_data(dlp_id):
     url = base_url + base_urls['dlp'].format(id=dlp_id)
-    data = fetch_data(url)
+    data = fetch_data('dlp', {'id': dlp_id})  # Pass endpoint and params separately
     if data:
         click.echo(data)
 
+# Function to fetch IPS anomaly data
 def fetch_ips_anomaly():
     try:
-        url = base_url + base_urls['ips_anomaly']  # Update the key in base_urls dictionary
+        url = base_url + base_urls['ips']  # Use the 'ips' key to access the IPS endpoint
         response = requests.get(url, headers={'Authorization': 'Bearer ' + api_token}, verify=False)
         if response.status_code == 200:
             click.echo(response.json())
