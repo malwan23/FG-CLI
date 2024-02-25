@@ -47,6 +47,7 @@ Update the config.ini file with the following information:
 API Token: Paste the API token generated in step 2.
 Management IP Address: Enter the IP address of your FortiGate device.
 HTTPS Port: Specify the HTTPS port used for API communication with the FortiGate.
+
 Backup Configuration:
 
 Modify the backup2.py file to include the same management IP address and HTTPS port as specified in the config.ini file. This ensures that the backup script communicates with the correct FortiGate device.
@@ -54,7 +55,6 @@ Modify the backup2.py file to include the same management IP address and HTTPS p
 Testing:
 
 After configuring config.ini and backup2.py, test the functionality of FG-CLI to ensure proper communication with your FortiGate device.
-Usage
 
 Once configured, FG-CLI offers various options for interacting with your FortiGate device:
 
