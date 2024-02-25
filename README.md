@@ -12,10 +12,15 @@ Dependencies
 This project relies on several Python libraries to function properly. Before running the script, make sure you have the following libraries installed:
 
 click: Used for creating beautiful command-line interfaces.
+
 configparser: Used for parsing configuration files, such as config.ini.
+
 requests: Used for making HTTP requests to interact with the Fortinet API.
+
 subprocess: Used for spawning new processes, which may be required for certain functionalities.
+
 json: Used for handling JSON data.
+
 Additionally, for the backup2.py script to function correctly, ensure you have the following libraries installed:
 
 os: Used for interacting with the operating system, which may be required for file operations.
@@ -54,11 +59,17 @@ Usage
 Once configured, FG-CLI offers various options for interacting with your FortiGate device:
 
 FortiView: Retrieve FortiView statistics.
+
 Switch/WiFi Controller: Access switch and WiFi controller status.
+
 System: View license status and FortiGuard information.
+
 Network: Explore DNS filtering, routing, and VPN statistics.
+
 Security: Investigate WAF, DLP, IPS, and proxy settings.
+
 Services: Manage NTP, DHCP, VOIP, SNMP, and DNS configurations.
+
 Users: Fetch firewall user information and banned user details.
 Logging: Download logs from FortiAnalyzer, FortiCloud, memory, and disk.
 Configuration Backup: Initiate configuration backup of the FortiGate device.
