@@ -71,5 +71,7 @@ Security: Investigate WAF, DLP, IPS, and proxy settings.
 Services: Manage NTP, DHCP, VOIP, SNMP, and DNS configurations.
 
 Users: Fetch firewall user information and banned user details.
+
 Logging: Download logs from FortiAnalyzer, FortiCloud, memory, and disk.
+
 Configuration Backup: Initiate configuration backup of the FortiGate device.
