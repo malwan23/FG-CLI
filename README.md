@@ -6,7 +6,26 @@
 FG-CLI (FortiGate Command Line Interface)
 FG-CLI is a command-line tool designed to interact with FortiGate devices through their multitude of REST APIs. It provides functionality for configuration, monitoring, and backup of FortiGate devices.
 
+
+Dependencies
+
+This project relies on several Python libraries to function properly. Before running the script, make sure you have the following libraries installed:
+
+click: Used for creating beautiful command-line interfaces.
+configparser: Used for parsing configuration files, such as config.ini.
+requests: Used for making HTTP requests to interact with the Fortinet API.
+subprocess: Used for spawning new processes, which may be required for certain functionalities.
+json: Used for handling JSON data.
+Additionally, for the backup2.py script to function correctly, ensure you have the following libraries installed:
+
+os: Used for interacting with the operating system, which may be required for file operations.
+You can install these dependencies using pip, the Python package installer, here is an example:
+"pip install click"
+
+Make sure to install these dependencies in your Python environment before executing the script or the backup functionality.
+
 Getting Started
+
 Before using FG-CLI, follow these steps to set up and configure the tool:
 
 API User Setup:
