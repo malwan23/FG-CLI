@@ -1,6 +1,13 @@
 #Main Script
 #Beta Version 1.5
 
+import click
+import configparser
+import requests
+import subprocess
+import sys
+import json
+
 # Read the configuration from config.ini
 config = configparser.ConfigParser()
 config.read('config.ini')
